@@ -8,8 +8,6 @@ import java.util.List;
 
 /**
  * GETTING FIRST 10 DATASETS, SHOWING RESOURCES
- * @author David Leoni 
- * @since 0.4.1
  */
 public class TestApp2 {
 
