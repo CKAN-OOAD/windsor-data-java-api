@@ -13,31 +13,20 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package eu.trentorise.opendata.jackan;
+package eu.trentorise.opendata.jackan.test.ckan;
 
-import eu.trentorise.opendata.jackan.model.CkanDataset;
-
-import java.util.List;
+import eu.trentorise.opendata.jackan.CkanClient;
 
 /**
- * Show searching datasets 
+ * Gets dataset list
  * @since 0.4.1
  */
-public class TestApp3 {
+public class TestApp1 {
 
     public static void main(String[] args) {
 
-        CkanClient cc = new CkanClient("http://dati.trentino.it");        
+        CkanClient cc = new CkanClient("http://dati.trentino.it");
+        System.out.println(cc.getDatasetList());
 
-        CkanQuery query = CkanQuery.filter().byGroupNames("turismo").byTagNames("ristoranti");
-
-        List<CkanDataset> filteredDatasets = cc.searchDatasets(query, 10, 0).getResults();
-
-        for (CkanDataset d : filteredDatasets) {
-            System.out.println();
-            System.out.println("DATASET: " + d.getName());
-        }
     }
-
-
 }

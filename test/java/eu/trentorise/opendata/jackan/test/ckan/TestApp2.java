@@ -13,11 +13,11 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package eu.trentorise.opendata.jackan;
+package eu.trentorise.opendata.jackan.test.ckan;
 
+import eu.trentorise.opendata.jackan.CkanClient;
 import eu.trentorise.opendata.jackan.model.CkanDataset;
 import eu.trentorise.opendata.jackan.model.CkanResource;
-
 import java.util.List;
 
 /**
@@ -32,25 +32,19 @@ public class TestApp2 {
         CkanClient cc = new CkanClient("http://dati.trentino.it");
        
         List<String> ds = cc.getDatasetList(10, 0);
-        System.out.println(getDataSetResources(ds, cc));
 
-
-    }
-
-    public static String getDataSetResources(List<String> ds, CkanClient cc){
-        String output = "";
         for (String s : ds) {
-            output = String.format("\n");
-            output += String.format("DATASET: %s\n", s);
+            System.out.println();
+            System.out.println("DATASET: " + s);
             CkanDataset d = cc.getDataset(s);
-            output+= String.format("  RESOURCES:\n");
+            System.out.println("  RESOURCES:");
             for (CkanResource r : d.getResources()) {
-                output = String.format("    %s\n", r.getName());
-                output = String.format("    FORMAT: %s\n", r.getFormat());
-                String.format("       URL: %s\n",r.getUrl());
+                System.out.println("    " + r.getName());
+                System.out.println("    FORMAT: " + r.getFormat());
+                System.out.println("       URL: " + r.getUrl());
             }
         }
-        return output;
+
     }
 
 }
