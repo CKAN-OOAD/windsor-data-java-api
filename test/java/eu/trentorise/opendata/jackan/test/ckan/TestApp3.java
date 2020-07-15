@@ -13,10 +13,11 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package eu.trentorise.opendata.jackan;
+package eu.trentorise.opendata.jackan.test.ckan;
 
+import eu.trentorise.opendata.jackan.CkanClient;
+import eu.trentorise.opendata.jackan.CkanQuery;
 import eu.trentorise.opendata.jackan.model.CkanDataset;
-
 import java.util.List;
 
 /**
@@ -38,6 +39,4 @@ public class TestApp3 {
             System.out.println("DATASET: " + d.getName());
         }
     }
-
-
 }
