@@ -23,7 +23,7 @@ public class TestApp1 {
 
     public static void main(String[] args) {
 
-        CkanClient cc = new CkanClient("http://dati.trentino.it");
+        CkanClient cc = new CkanClient("https://demo.ckan.org");
         System.out.println(cc.getDatasetList());
 
     }
