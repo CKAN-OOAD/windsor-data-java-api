@@ -18,24 +18,6 @@ public class Record implements RecordTemplate
 
 	public HashMap<Integer, Field> recordMap;
 
-/*   REALIZED I DON'T NEED A DEFAULT CONSTRUCTOR... EVERY RECORD MUST HAVE DEFINED FIELDS!
- 
-	public Record()	// create a blank record
-	{
-		int i;
-		recordMap = new HashMap<>(); 
-
-		for (i=0; i < NUMBER_OF_FIELDS; i++)
-		{
-	//		recordMap.put(i, FIELD_TYPES[i]);
-	//		recordMap.put(i, FIELD_LABELS[i]);
-	//		recordMap.put(i, "empty");	
-			recordMap.put(i, new Field(FIELD_TYPES[i], FIELD_LABELS[i], "empty"));
-
-		}
-	}
-*/
-
 
 	/** A valuable public utility method that allows me to create a record from a line!
          The actual line is a comma delimited list of field values that we read from a file
@@ -67,7 +49,7 @@ public class Record implements RecordTemplate
 		// This is the advantage of a hashmap over a list... no need to "search" for an element to
 		// to change its value, simply use the "hash key" which is just the index of the field. 
 		// O(C) efficiency!
-	//	recordMap.replace(fieldIndex, newField);
+		recordMap.replace(fieldIndex, newField);
 
 		return true;
 	}

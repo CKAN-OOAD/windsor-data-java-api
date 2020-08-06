@@ -15,7 +15,7 @@ class FileManagerApplication
 		FileManager fm;
 		boolean err = true;
 
-		// System.out.println(args.length);
+		System.out.println(args.length);
 
 		if (args.length==1)
 		{

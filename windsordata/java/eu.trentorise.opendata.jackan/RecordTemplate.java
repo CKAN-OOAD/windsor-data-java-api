@@ -13,7 +13,7 @@ interface RecordTemplate
 
 // Lab 9 data set
 // How to use this? Simply remove the comment block of code that you want
-// to use - and comment the other. 
+/* to use - and comment the other.
 
 	public static final int NUMBER_OF_FIELDS = 3;
 	public static final String[] FIELD_LABELS = {"First Name", "Last Name", "Date of Birth"};
@@ -23,14 +23,14 @@ interface RecordTemplate
 	public static final int PRIMARY_KEY_FIELD_INDEX = 1; // last name
 
 
-// This is another data set from the City of Windsor open data repository
+*/// This is another data set from the City of Windsor open data repository
 // FID,ADDRESS,CENTRE,X,Y
 // SOURCE: https://opendata.citywindsor.ca/opendata/details/195
 
 // How to use: comment out for this, and comment the above block of code.
 // only one version of this code may be uncommented.
 
-/*   <-- block comments to disable, remove to enable
+//   <-- block comments to disable, remove to enable
 
 	public static final int NUMBER_OF_FIELDS = 5;
 	public static final String[] FIELD_LABELS = {"FID", "Address", "Centre","X","Y"};
@@ -39,7 +39,7 @@ interface RecordTemplate
 	public static final String DELIMITER = ",";
 	public static final int PRIMARY_KEY_FIELD_INDEX = 2; // Centre
 
-*/
+//
 
 }
 

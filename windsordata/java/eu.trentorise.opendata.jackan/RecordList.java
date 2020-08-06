@@ -12,7 +12,7 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
-//import java.util.Iterator;
+import java.util.Iterator;
 
 class RecordList implements RecordTemplate
 {
@@ -62,8 +62,8 @@ class RecordList implements RecordTemplate
 	public void sort() // sort according to primary key defined in RecordTemplate
 	{
    	// todo: make this support different data types such as dates, int etc.
-	//	recordList.sort((Record r1, Record r2)->r1.getValue(PRIMARY_KEY_FIELD_INDEX).compareTo(r2.getValue(PRIMARY_KEY_FIELD_INDEX)));
-      //recordList.forEach((r)->System.out.println(r));   
+		recordList.sort((Record r1, Record r2)->r1.getValue(PRIMARY_KEY_FIELD_INDEX).compareTo(r2.getValue(PRIMARY_KEY_FIELD_INDEX)));
+        recordList.forEach((r)->System.out.println(r));
 	}
 	
 	public int size()
@@ -75,21 +75,21 @@ class RecordList implements RecordTemplate
 	{
 		String s="";
 
-		// recordList.forEach(Record -> s+=Record);	// new in Java8 has an issue with not final error
+		//recordList.forEach(Record -> s+=Record);	// new in Java8 has an issue with not final error
 
-		for (Record r : recordList)	// for each Record r in recordList...
-		    s+=r+"\n";				// append r (toString) and a new line to the output string
+	//	for (Record r : recordList)	// for each Record r in recordList...
+	//	    s+=r+"\n";				// append r (toString) and a new line to the output string
 
-/* 	    Old iterator alternative way:
+// 	    Old iterator alternative way:
 
-         (Iterator<String> keySetIterator = recordsMap.keySet().iterator(); 
-		String key;
-		while(keySetIterator.hasNext())
+        Iterator<Record> RecordIterator = recordList.iterator();
+		Record record;
+		while(RecordIterator.hasNext())
 		{ 
-			key = keySetIterator.next(); 
-			s+=recordsMap.get(key)+"\n";
+			record = RecordIterator.next();
+			s+=record.toString()+"\n";
 		}
-*/
+
 		return s;	// this string will contain all the lines (ie. all the records)
 	}
 	
