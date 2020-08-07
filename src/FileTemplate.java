@@ -1,3 +1,8 @@
+/**
+ * Gives the basic structure of a Record
+ * This is the super class of any class that needs to access these fields
+ */
+
 import java.util.ArrayList;
 
 public class FileTemplate {

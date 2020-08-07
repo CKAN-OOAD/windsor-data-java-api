@@ -6,7 +6,7 @@
 
 */
 
-class FileManager implements RecordTemplate
+class FileManager
 {
 	public RecordViewer rv;
 /*

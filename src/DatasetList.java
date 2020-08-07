@@ -1,3 +1,9 @@
+/** DatasetList maintains a list of Dataset(s)
+ Datasets can be loaded from a file a CKAN website
+
+ @author Jose Guillen Santos
+
+ */
 import eu.trentorise.opendata.jackan.CkanClient;
 import eu.trentorise.opendata.jackan.model.CkanDataset;
 import eu.trentorise.opendata.jackan.model.CkanResource;
@@ -16,12 +22,17 @@ public class DatasetList implements DatasetTemplate {
     public void loadDatasets(){
         CkanClient cc = new CkanClient(CKAN_URL);
         List<String> ds = cc.getDatasetList(DATASET_LIMIT, 0);
-        ArrayList<String> urls = new ArrayList<>();
-        ArrayList<String> formats = new ArrayList<>();
-        ArrayList<String> fileNames = new ArrayList<>();
+        ArrayList<String> urls;
+        ArrayList<String> formats;
+        ArrayList<String> fileNames;
+
         for (String dataset : ds) {
             CkanDataset d = cc.getDataset(dataset);
             int fileCount = 0;
+            formats = new ArrayList<>();
+            urls = new ArrayList<>();
+            fileNames = new ArrayList<>();
+
             for (CkanResource r : d.getResources()) {
                 if (r.getFormat().equals("CSV")){
                     urls.add(r.getUrl());
@@ -30,6 +41,7 @@ public class DatasetList implements DatasetTemplate {
                     fileCount++;
                 }
             }
+
             datasetList.add(new Dataset(dataset, formats, urls, fileNames, fileCount));
         }
 

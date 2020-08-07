@@ -1,3 +1,9 @@
+/** Dataset is a class that abstracts a collection of files, known as dataset.
+ A Dataset is a has a names for its files, formats, urls, and a name itself
+ Each one of these files needs a template if it wants to be managed
+ @author Jose Guillen Santos
+
+ */
 import java.util.ArrayList;
 import java.net.*;
 import java.io.*;
@@ -74,9 +80,9 @@ public class Dataset implements DatasetTemplate {
         dataset += String.format("DATASET: %s\n", this.datasetName);
         dataset+= String.format("  RESOURCES:\n");
         for (int i = 0; i < fileCount; i++) {
-            dataset += String.format("    %s\n", fileNames.get(i));
-            dataset += String.format("    FORMAT: %s\n", formats.get(i));
-            dataset+=String.format("       URL: %s\n",urls.get(i));
+            dataset += String.format("    %s\n", this.fileNames.get(i));
+            dataset += String.format("    FORMAT: %s\n", this.formats.get(i));
+            dataset+=String.format("       URL: %s\n", this.urls.get(i));
         }
         return dataset;
     }

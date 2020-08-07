@@ -1,11 +1,9 @@
 /**
- * Write a description of class LineChart01 here.
+ * Creates a Simple Data Visualization based off the record given and its fields.
  *
  * @author Jose Guillen Santos
  * @version 0.0.1
  */
-
-
 
 
 import org.knowm.xchart.SwingWrapper;
