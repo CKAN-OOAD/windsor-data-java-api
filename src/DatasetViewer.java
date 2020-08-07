@@ -104,13 +104,17 @@ public class DatasetViewer extends DataViewer {
             output += String.format("    URL: %s\n>>>", datasets.get(currentDataset).urls.get(i));
         }
         System.out.println(output);
+        System.out.printf("SELECTION >>> ");
         try {
             int selection = Integer.parseInt(scan.next());
             if (selection>=0 && selection<=datasets.get(currentDataset).fileCount){
                 FileManager fm = new FileManager(datasets.get(currentDataset).getTemplate(selection));
+            }else{
+                System.out.println("Invalid digit");
             }
         } catch (NumberFormatException e){
             System.out.println("Wrong input type.");
+            System.out.println(e);
         } catch (IOException e){
             System.out.println(e);
         }
