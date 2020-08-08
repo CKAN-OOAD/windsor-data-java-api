@@ -27,7 +27,7 @@ public class RecordVisualizer{
             switch(selection)
             {
                 case 'l':
-                    visualizeBar(records);
+                    visualizeLine(records);
                     break;
                 case 'b':
                     break;
@@ -86,7 +86,7 @@ public class RecordVisualizer{
         System.out.print("[L]ine Graph | [B]ar Graph | [M]ap | [P]ie Graph | [L]ogarithmic Graph | [H]eat Map  | E[x]it>>");
     }
 
-    public static void visualizeBar(RecordList records){ //asks user for columns that are going to be x and y values then provides bar graph visualization
+    public static void visualizeLine(RecordList records){ //asks user for columns that are going to be x and y values then provides bar graph visualization
         Scanner scan = new Scanner(System.in);
         int x,y;
         String output = "";
@@ -129,7 +129,7 @@ public class RecordVisualizer{
             System.out.println("Wrong input type.");
             return;
         }
-        BarGraph graph = new BarGraph(records, x, y);
+        LineGraph graph = new LineGraph(records, x, y);
         graph.displayGraph();
     }
 

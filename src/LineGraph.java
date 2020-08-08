@@ -4,9 +4,9 @@ import org.knowm.xchart.XYChart;
 
 import java.util.ArrayList;
 
-public class BarGraph extends Graph {
+public class LineGraph extends Graph {
     public int x, y;
-    public BarGraph(RecordList recordList, int x, int y){
+    public LineGraph(RecordList recordList, int x, int y){
         super(recordList);
         this.x = x;
         this.y = y;
