@@ -32,27 +32,22 @@ public class TestApp2 {
         CkanClient cc = new CkanClient("http://dati.trentino.it");
        
         List<String> ds = cc.getDatasetList(10, 0);
-        System.out.println(getDataSetResources(ds, cc));
 
-    }
-
-    public static String getDataSetResources(List<String> ds, CkanClient cc){
-        String output = "";
         for (String s : ds) {
-            output += String.format("\n");
-            output += String.format("DATASET: %s\n", s);
+            System.out.println();
+            System.out.println("DATASET: " + s);
             CkanDataset d = cc.getDataset(s);
-            output+= String.format("  RESOURCES:\n");
+            System.out.println("  RESOURCES:");
             for (CkanResource r : d.getResources()) {
                 if (r.getFormat().equals("CSV")){
-                    output += String.format("    %s\n", r.getName());
-                    output += String.format("    FORMAT: CSV\n");
-                    output+=String.format("       URL: %s\n",r.getUrl());
+                    System.out.println("    " + r.getName());
+                    System.out.println("    FORMAT: " + r.getFormat());
+                    System.out.println("       URL: " + r.getUrl());
                 }
 
             }
         }
-        return output;
+
     }
 
 }

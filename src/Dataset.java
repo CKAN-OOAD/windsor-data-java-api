@@ -87,9 +87,5 @@ public class Dataset implements DatasetTemplate {
         return dataset;
     }
 
-    /**
-     * Class FileTemplate, Datasets have multiple files which need templates to be managed
-     * FileTemplate has a fieldnumber, labels, types, filename, delimiter, primary_field
-     */
 
 }

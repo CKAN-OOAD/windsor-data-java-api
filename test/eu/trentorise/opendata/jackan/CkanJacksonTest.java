@@ -21,17 +21,13 @@ import eu.trentorise.opendata.jackan.model.CkanOrganization;
 import eu.trentorise.opendata.jackan.model.CkanResource;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import eu.trentorise.opendata.commons.TodConfig;
-import eu.trentorise.opendata.commons.internal.org.apache.commons.lang3.time.FastDateFormat;
 import eu.trentorise.opendata.jackan.model.CkanDatasetBase;
-import eu.trentorise.opendata.jackan.model.CkanOrganization;
 
 import java.io.*;
 import java.sql.Timestamp;
 import java.text.ParseException;
 import java.util.Random;
 import java.util.TimeZone;
-import java.util.UUID;
-import java.util.logging.Level;
 import java.util.logging.Logger;
 import org.junit.After;
 import org.junit.AfterClass;

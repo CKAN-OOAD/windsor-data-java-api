@@ -24,7 +24,7 @@ import eu.trentorise.opendata.jackan.model.CkanTag;
 import eu.trentorise.opendata.jackan.model.CkanUser;
 import eu.trentorise.opendata.jackan.model.CkanVocabulary;
 import eu.trentorise.opendata.jackan.test.JackanTestConfig;
-import java.lang.reflect.Constructor;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;

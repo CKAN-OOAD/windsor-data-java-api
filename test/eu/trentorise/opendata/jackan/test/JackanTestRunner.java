@@ -6,7 +6,6 @@ import org.junit.runner.Description;
 import org.junit.runners.model.FrameworkMethod;
 import org.junit.runners.model.InitializationError;
 
-import eu.trentorise.opendata.jackan.test.JackanTestRunner;
 import junitparams.JUnitParamsRunner;
 
 /**

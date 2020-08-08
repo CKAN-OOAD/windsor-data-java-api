@@ -19,7 +19,7 @@ public class DatasetList implements DatasetTemplate {
 
     //querys the ckan site for the first 10 datasets to view
 
-    public void loadDatasets(){
+    public int loadDatasets(){
         CkanClient cc = new CkanClient(CKAN_URL);
         List<String> ds = cc.getDatasetList(DATASET_LIMIT, 0);
         ArrayList<String> urls;
@@ -41,10 +41,10 @@ public class DatasetList implements DatasetTemplate {
                     fileCount++;
                 }
             }
-
             datasetList.add(new Dataset(dataset, formats, urls, fileNames, fileCount));
         }
 
+        return datasetList.size();
     }
     public Dataset get(int n) //gets the nth dataset from list
     {

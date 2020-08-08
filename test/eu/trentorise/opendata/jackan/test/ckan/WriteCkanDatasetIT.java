@@ -20,7 +20,6 @@ import static eu.trentorise.opendata.commons.validation.Preconditions.checkNotEm
 import eu.trentorise.opendata.jackan.CheckedCkanClient;
 import eu.trentorise.opendata.jackan.CkanClient;
 import eu.trentorise.opendata.jackan.exceptions.CkanAuthorizationException;
-import eu.trentorise.opendata.jackan.exceptions.CkanException;
 import eu.trentorise.opendata.jackan.exceptions.CkanNotFoundException;
 import eu.trentorise.opendata.jackan.exceptions.JackanException;
 import eu.trentorise.opendata.jackan.SearchResults;
@@ -35,7 +34,7 @@ import eu.trentorise.opendata.jackan.model.CkanState;
 import eu.trentorise.opendata.jackan.model.CkanTag;
 import eu.trentorise.opendata.jackan.test.JackanTestConfig;
 import static eu.trentorise.opendata.jackan.test.ckan.ReadCkanIT.PRODOTTI_CERTIFICATI_DATASET_NAME;
-import static eu.trentorise.opendata.jackan.test.ckan.WriteCkanTest.JACKAN_URL;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;

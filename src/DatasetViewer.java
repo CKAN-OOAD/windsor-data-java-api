@@ -2,9 +2,7 @@
  This is a text mode interactive implementation of the viewer.
 
  @author Jose Guillen Santos
- (C)2018 All Rights Reserved to the author.
- This code is strictly for education use. May not be reproduced without
- express written permission of the author.
+
  */
 import java.io.IOException;
 import java.util.InputMismatchException;

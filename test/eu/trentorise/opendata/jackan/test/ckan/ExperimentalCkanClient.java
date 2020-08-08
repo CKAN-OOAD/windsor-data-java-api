@@ -18,7 +18,6 @@ package eu.trentorise.opendata.jackan.test.ckan;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
-import eu.trentorise.opendata.jackan.CheckedCkanClient;
 import eu.trentorise.opendata.jackan.CkanClient;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;

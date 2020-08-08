@@ -16,8 +16,6 @@
 package eu.trentorise.opendata.jackan.test.ckan;
 
 import java.util.logging.Logger;
-import org.junit.Ignore;
-import org.junit.Test;
 
 /**
  *
