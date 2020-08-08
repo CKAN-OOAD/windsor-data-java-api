@@ -26,10 +26,10 @@ public class Dataset implements DatasetTemplate {
     }
 
     /** useful couple of gets.... */
-    public String getFormats(int key) {
+    public String getFormat(int key) {
         return formats.get(key);
     }
-    public String getUrls(int key) {
+    public String getUrl(int key) {
         return urls.get(key);
     }
 
@@ -47,7 +47,7 @@ public class Dataset implements DatasetTemplate {
         ArrayList<String> fieldLabels = new ArrayList<>();
         String filename = fileNames.get(key).replace(" ","_")+".txt"; // filename to write to is record name with txt concat
 
-        URL url = new URL(getUrls(key));
+        URL url = new URL(getUrl(key));
         BufferedWriter writer = new BufferedWriter(new FileWriter(filename)); //writes dataset file to a local file with the name of filename
         BufferedReader read = new BufferedReader(new InputStreamReader(url.openStream())); //reads from url
         String line;
