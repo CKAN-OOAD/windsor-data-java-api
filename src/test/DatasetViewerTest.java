@@ -9,22 +9,6 @@ class DatasetViewerTest {
     }
 
     @Test
-    void getSelection() {
-    }
-
-    @Test
-    void displayMenu() {
-    }
-
-    @Test
-    void displayDataset() {
-    }
-
-    @Test
-    void displayDatasets() {
-    }
-
-    @Test
     void viewDataset() {
     }
 }
